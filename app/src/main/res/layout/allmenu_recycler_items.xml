@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginEnd="4dp"
+    android:layout_marginRight="8dp"
+    android:background="@drawable/recycler_bg2">
+
+
+    <ImageView
+        android:id="@+id/all_menu_image"
+        android:layout_width="84dp"
+        android:layout_height="95dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/all_menu_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/popular1" />
+
+    <TextView
+        android:id="@+id/all_menu_name"
+        android:layout_width="63dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="54dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/all_menu_note"
+        app:layout_constraintEnd_toStartOf="@+id/addOrder"
+        app:layout_constraintStart_toEndOf="@+id/all_menu_image"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/all_menu_note"
+        android:layout_width="65dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="9dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/all_menu_rating"
+        app:layout_constraintEnd_toStartOf="@+id/orderChangeLayout"
+        app:layout_constraintStart_toEndOf="@+id/all_menu_image"
+        app:layout_constraintTop_toBottomOf="@+id/all_menu_name" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="29dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/all_menu_rating"
+        app:layout_constraintStart_toEndOf="@+id/all_menu_image"
+        app:layout_constraintTop_toBottomOf="@+id/all_menu_note"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_mdi_star_rate" />
+
+    <TextView
+        android:id="@+id/all_menu_rating"
+        android:layout_width="32dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="1dp"
+        android:text="3.9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/all_menu_deliverytime"
+        app:layout_constraintStart_toEndOf="@+id/imageView6" />
+
+    <TextView
+        android:id="@+id/all_menu_deliverytime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/time_bg"
+        android:gravity="center"
+        android:text="45 mins"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/orderChangeLayout"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/all_menu_rating"
+        app:layout_constraintTop_toBottomOf="@+id/all_menu_note"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/all_menu_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:text="166"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/orderChangeLayout"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/all_menu_price"
+        app:layout_constraintStart_toEndOf="@+id/all_menu_deliverytime"
+        app:layout_constraintTop_toBottomOf="@+id/addOrder">
+
+        <Button
+            android:id="@+id/plusButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:padding="0dp"
+            android:text="+"
+            android:textSize="24sp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/countText"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:padding="0dp"
+            android:text="0"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/minusButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:padding="0dp"
+            android:text="-"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:ignore="TouchTargetSizeCheck" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/addOrder"
+        android:layout_width="119dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/design_default_color_error"
+        android:text="Add To Bag"
+        app:layout_constraintEnd_toStartOf="@+id/all_menu_price"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
